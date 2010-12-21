@@ -50,7 +50,6 @@ public class PageRankDriver {
 		deleteDir(iteration_output);
 
 		// start the iteration		
-		JobClient client = new JobClient();
 		int iter_num = 5;
 		for (int i = 0; i < iter_num; i++) {
 			System.out.println("######################### iteration " + i + " ###############################");
