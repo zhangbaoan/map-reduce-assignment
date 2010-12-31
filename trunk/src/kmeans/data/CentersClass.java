@@ -43,6 +43,16 @@ public class CentersClass {
 		return centers.get(min_index);
 	}
 
+	public double dist2Centers(CentersClass another) {
+		assert(this.centers.size() == another.centers.size());
+		
+		double dist = 0;
+		for (int i = 0; i < this.centers.size(); i++) {
+			dist += this.centers.get(i).distance(another.centers.get(i));
+		}
+		return dist;
+	}
+	
 	public String toString() {
 		String result = "";
 		Iterator<DataClass> iter = centers.iterator();
